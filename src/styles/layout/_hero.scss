@@ -21,12 +21,12 @@
   }
   
   &__title {
-    @apply text-4xl md:text-5xl font-bold text-secondary-dark mb-4 leading-tight;
+    @apply text-3xl md:text-5xl font-bold text-secondary-dark mb-4 leading-tight;
     color: #7E3107;
   }
   
   &__subtitle {
-    @apply text-lg text-gray-600 mb-8;
+    @apply text-base md:text-lg text-gray-600 mb-8;
   }
   
   &__actions {
