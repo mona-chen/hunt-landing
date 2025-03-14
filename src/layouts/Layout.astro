@@ -6,34 +6,128 @@ interface Props {
   description?: string;
 }
 
+
+import '../styles/main.scss';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  keywords?: string;
+  author?: string;
+  noIndex?: boolean;
+}
+
 const { 
-  title = "Money Transfer - Fast, Secure, and Hassle-Free",
-  description = "Send money anywhere in the world with our fast, secure, and hassle-free money transfer service."
+  title = "Hunt - Fast, Secure, and Hassle-Free",
+  description = "Send money anywhere in the world with our fast, secure, and hassle-free money transfer service.",
+  canonicalUrl = Astro.url.href,
+  ogImage = "/og-image.jpg",
+  ogType = "website",
+  twitterCard = "summary_large_image",
+  keywords = "money transfer, international payments, fast money transfer, secure payment, global remittance",
+  author = "Hunt Finance",
+  noIndex = false
 } = Astro.props;
+
+// Get the site domain for structured data
+const siteDomain = Astro.url.host;
+
+// Structured data for organization
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Hunt Finance",
+  "url": `https://${siteDomain}`,
+  "logo": `https://${siteDomain}/src/assets/image/full-logo.svg`,
+  "sameAs": [
+    "https://facebook.com/moneytransferservice",
+    "https://twitter.com/moneytransfer",
+    "https://linkedin.com/company/moneytransferservice"
+  ]
+};
+
+// Structured data for website
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Hunt Finance",
+  "url": `https://${siteDomain}`,
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": `https://${siteDomain}/search?q={search_term_string}`,
+    "query-input": "required name=search_term_string"
+  }
+};
 ---
+
 
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content={author} />
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalUrl} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="Hunt Finance" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content={twitterCard} />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    
+    <!-- No index if specified -->
+    {noIndex && <meta name="robots" content="noindex, nofollow" />}
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    
+    <!-- Generator -->
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Title -->
     <title>{title}</title>
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="/src/assets/image/brand.svg" as="image" type="image/svg+xml">
+    <link rel="preload" href="/src/assets/image/full-logo.svg" as="image" type="image/svg+xml">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
   </head>
   <body>
     <slot />
@@ -78,23 +172,23 @@ const {
       // Intersection Observer for animations
       const animatedElements = document.querySelectorAll('.animate-on-scroll');
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      // Get the animation type from data-animation attribute
-      const animationType = (entry.target as HTMLElement).dataset.animation;
-      // Add the animation class
-      if (animationType) {
-        entry.target.classList.add(animationType);
-      }
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1 });
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Get the animation type from data-animation attribute
+            const animationType = (entry.target as HTMLElement).dataset.animation;
+            // Add the animation class
+            if (animationType) {
+              entry.target.classList.add(animationType);
+            }
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
 
-animatedElements.forEach(element => {
-  observer.observe(element);
-});
+      animatedElements.forEach(element => {
+        observer.observe(element);
+      });
     </script>
   </body>
 </html>
