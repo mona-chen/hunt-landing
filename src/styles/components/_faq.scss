@@ -3,22 +3,7 @@
   margin-top: 5rem;
   margin-bottom: 5rem;
   &__item {
-    @apply p-4 py-8;
-    background-color: #F9F8F5;
-    height: min-content;
-    gap: 1rem;
-    border-radius: 168px;
-
-    // &--open {
-    //   border-radius: 40px;
-    // }
-
-    @media (max-width: 767px) {
-  
-        border-radius: 40px;
-
-  }
-
+    @apply p-4 py-8 bg-[#F9F8F5] h-min gap-4 rounded-[40px] md:rounded-[168px];
   }
   
   &__header {
