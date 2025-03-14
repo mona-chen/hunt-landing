@@ -94,7 +94,7 @@
   }
 
   &__stats {
-    @apply flex flex-wrap justify-center gap-40 text-center mb-20;
+    @apply flex flex-wrap justify-center gap-20 md:gap-40 text-center mb-20;
   }
   
   &__stat {
