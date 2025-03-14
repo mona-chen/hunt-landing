@@ -1,0 +1,100 @@
+---
+import '../styles/main.scss';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "Money Transfer - Fast, Secure, and Hassle-Free",
+  description = "Send money anywhere in the world with our fast, secure, and hassle-free money transfer service."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <slot />
+    
+    <script>
+      // Header scroll effect
+      const header = document.querySelector('.header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+          header?.classList.add('header--scrolled');
+        } else {
+          header?.classList.remove('header--scrolled');
+        }
+      });
+      
+      // Mobile menu toggle
+      const mobileMenuToggle = document.querySelector('.header__mobile-toggle');
+      const mobileMenuClose = document.querySelector('.header__mobile-menu-close');
+      const mobileMenu = document.querySelector('.header__mobile-menu');
+      
+      mobileMenuToggle?.addEventListener('click', () => {
+        mobileMenu?.classList.remove('header__mobile-menu--closed');
+      });
+      
+      mobileMenuClose?.addEventListener('click', () => {
+        mobileMenu?.classList.add('header__mobile-menu--closed');
+      });
+      
+      // FAQ accordion
+      const faqQuestions = document.querySelectorAll('.faq__question');
+      
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+          const answer = question.nextElementSibling;
+          const icon = question.querySelector('.faq__question-icon');
+          
+          answer?.classList.toggle('faq__answer--open');
+          icon?.classList.toggle('faq__question-icon--open');
+        });
+      });
+      
+      // Intersection Observer for animations
+      const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Get the animation type from data-animation attribute
+      const animationType = (entry.target as HTMLElement).dataset.animation;
+      // Add the animation class
+      if (animationType) {
+        entry.target.classList.add(animationType);
+      }
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+animatedElements.forEach(element => {
+  observer.observe(element);
+});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+---
+import Image from "astro/components/Image.astro"
+import mobileAppImage from "../assets/images/mobile-app.png"
+---
+
+<section class="section bg-gradient-to-br from-gray-50 to-gray-100 max-h-[35rem] md:max-h-[40rem] overflow-hidden">
+  <div class="container">
+    <div class="text-center mb-12 animate-on-scroll" data-animation="slide-up">
+      <h2 class="heading--lg mb-4">Manage Your Money On The Go</h2>
+      <p class="text--md text-gray-600 max-w-3xl mx-auto">Our mobile app gives you full control of your finances wherever you are. Send money, check rates, and track transfers with just a few taps.</p>
+    </div>
+    
+    <div class="flex justify-center animate-on-scroll " data-animation="fade-in">
+      <Image src={mobileAppImage}alt="Money Transfer Mobile App" class="md:w-7/12 object-bottom mt-14 md:m-0" />
+    </div>
+  </div>
+</section>

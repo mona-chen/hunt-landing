@@ -1,0 +1,54 @@
+---
+const testimonials = [
+  {
+    quote: '"I\'ve been using this service for over a year to send money to my family overseas. The rates are great and the transfers are always fast!"',
+    name: "Sarah Johnson",
+    role: "Regular Customer",
+    avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+  },
+  {
+    quote: '"As a small business owner, I need reliable international payments. This platform has saved me thousands in fees compared to my bank."',
+    name: "David Rodriguez",
+    role: "Business Owner",
+    avatar: "https://randomuser.me/api/portraits/men/32.jpg"
+  },
+  {
+    quote: '"The mobile app is incredibly easy to use. I can send money to my relatives back home in just a few taps. Highly recommended!"',
+    name: "Priya Sharma",
+    role: "App User",
+    avatar: "https://randomuser.me/api/portraits/women/68.jpg"
+  }
+];
+---
+
+<section class="section testimonial-section">
+  <div class="container">
+    <div class="text-center mb-12 animate-on-scroll" data-animation="slide-up">
+      <p class="testimonial-section__header-text !color-[#5235E8]">TESTIMONIALS</p>
+      <h2 class="heading--lg mb-4">Trusted by more than 100K+ people</h2>
+      <p class="text--md text-gray-600 max-w-3xl mx-auto">Join thousands of satisfied customers who trust us with their money transfer needs.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 animate-on-scroll" data-animation="fade-in">
+      {testimonials.map((testimonial) => (
+        <div class="testimonial">
+          <div class="testimonial__rating">
+            <i class="fas fa-star text-[#5235E8]"></i>
+            <i class="fas fa-star text-[#5235E8]"></i>
+            <i class="fas fa-star text-[#5235E8]"></i>
+            <i class="fas fa-star text-[#5235E8]"></i>
+            <i class="fas fa-star text-[#5235E8]"></i>
+          </div>
+          <p class="testimonial__quote">{testimonial.quote}</p>
+          <div class="testimonial__author">
+            <img src={testimonial.avatar} alt={testimonial.name} class="testimonial__avatar" />
+            <div class="testimonial__info">
+              <div class="testimonial__name">{testimonial.name}</div>
+              <div class="testimonial__role">{testimonial.role}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

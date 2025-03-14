@@ -1,0 +1,28 @@
+/* Call to action section styles */
+.cta {
+  @apply py-16 md:py-24 bg-gradient-to-br from-secondary to-secondary-dark text-white;
+  
+  &__container {
+    @apply container mx-auto px-4;
+  }
+  
+  &__content {
+    @apply flex flex-col md:flex-row items-center justify-between;
+  }
+  
+  &__text {
+    @apply md:w-2/3 mb-8 md:mb-0;
+  }
+  
+  &__title {
+    @apply text-3xl md:text-4xl font-bold mb-4;
+  }
+  
+  &__subtitle {
+    @apply text-lg text-gray-300;
+  }
+  
+  &__actions {
+    @apply md:w-1/3 flex justify-center md:justify-end;
+  }
+}

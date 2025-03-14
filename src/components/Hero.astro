@@ -1,0 +1,32 @@
+---
+import Image from "astro/components/Image.astro";
+import heroImg from '../assets/images/hero-devices.png'
+---
+
+<section class="hero">
+  <div class="hero__container">
+    <div class="hero__content">
+      <div class="hero__text animate-on-scroll" data-animation="slide-up">
+        <h1 class="hero__title">Send Money Anywhere, Anytime<br>Fast, Secure, and Hassle-Free.</h1>
+        <p class="hero__subtitle">Transferring money has never been easier. Send money to friends, family, or businesses anywhere in the world with our secure, fast, and affordable service.</p>
+  
+        <div class="flex items-center justify-center mt-8 space-x-4">
+          <a href="#app-store" class="transition-transform hover:scale-105 duration-300">
+            <img src="/images/app-store.png" alt="Download on App Store" class="h-10" />
+          </a>
+          <a href="#google-play" class="transition-transform hover:scale-105 duration-300">
+            <img src="/images/playstore.png" alt="Get it on Google Play" class="h-10" />
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero__image animate-on-scroll" data-animation="fade-in">
+        <Image src={heroImg} alt="Money Transfer App on multiple devices" class="hero__image" />
+      </div>
+    </div>
+
+  </div>
+
+      
+
+</section>

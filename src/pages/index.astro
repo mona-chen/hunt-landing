@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import CurrencyConverter from '../components/CurrencyConverter.astro';
+import CryptoIntegration from '../components/CryptoIntegration.astro';
+import MobileApp from '../components/MobileApp.astro';
+import FAQ from '../components/FAQ.astro';
+import Testimonials from '../components/Testimonials.astro';
+import CTA from '../components/CTA.astro';
+import Footer from '../components/Footer.astro';
+
+
+
+---
+
+<Layout >
+  <Header />
+  <main>
+    <Hero />
+    <Features :client:load/>
+    <CurrencyConverter />
+    <CryptoIntegration />
+    <MobileApp />
+    <!-- <CTA /> -->
+    <FAQ />
+    <Testimonials />
+  </main>
+  <Footer />
+</Layout>

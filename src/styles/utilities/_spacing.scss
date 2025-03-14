@@ -1,0 +1,16 @@
+/* Custom spacing utilities */
+.section {
+  @apply py-16 md:py-24;
+  
+  &--sm {
+    @apply py-8 md:py-12;
+  }
+  
+  &--lg {
+    @apply py-24 md:py-32;
+  }
+}
+
+.container {
+  @apply px-4 mx-auto max-w-7xl;
+}

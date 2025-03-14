@@ -1,0 +1,89 @@
+/* Header styles */
+.header {
+  @apply fixed top-0 left-0 right-0 z-50 bg-[#FEEFE6] backdrop-blur-sm transition-all duration-300 ease-in-out;
+  
+  &--scrolled {
+    @apply shadow-md;
+  }
+  
+  &__container {
+    @apply container mx-auto px-4 py-4 flex items-center justify-between;
+  }
+  
+  &__logo {
+    @apply w-24;
+
+    &.logo-full {
+     width: 10rem !important;
+    }
+    
+    img {
+      @apply w-full;
+    }
+  }
+  
+  &__nav {
+    @apply hidden md:flex items-center space-x-8 ;
+  }
+  
+  &__link {
+    @apply text-secondary-dark  font-normal hover:text-primary transition-colors transition-all duration-300 ease-in-out;
+    
+    &--active {
+      @apply text-primary;
+    }
+  }
+  
+  &__actions {
+    @apply flex items-center space-x-4;
+  }
+  
+  &__mobile-toggle {
+    @apply md:hidden p-2 text-secondary-dark hover:text-primary transition-colors duration-300 ease-in-out;
+  }
+  
+  &__mobile-menu {
+    @apply fixed top-0 bg-white w-full z-50 flex flex-col p-6 md:hidden transform transition-transform duration-300 ease-in-out;
+    &::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100vh;
+      backdrop-filter: blur(10px) saturate(180%);
+      -webkit-backdrop-filter: blur(10px) saturate(180%); /* For Safari */
+      background-color: rgba(255, 255, 255, 0.75);
+      z-index: -1;
+    }
+  
+    &--closed {
+      @apply translate-x-full;
+    }
+    
+    &-header {
+      @apply flex items-center justify-between mb-8;
+    }
+    
+    &-close {
+      @apply p-2 text-secondary-dark hover:text-primary transition-colors duration-300 ease-in-out;
+    }
+    
+    &-nav {
+      @apply flex flex-col space-y-6;
+    }
+    
+    &-link {
+      @apply text-xl font-medium text-secondary-dark hover:text-primary transition-colors duration-300 ease-in-out;
+      
+      &--active {
+        @apply text-primary;
+      }
+    }
+    
+    &-actions {
+      @apply mt-auto flex flex-col space-y-4 mt-8;
+    }
+  }
+}

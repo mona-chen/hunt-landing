@@ -1,0 +1,123 @@
+/* Features section styles */
+.features {
+  @apply py-16 md:py-24;
+  
+  &__container {
+    @apply container lg:max-w-[2000px];
+
+
+    &-grid {
+      @apply  grid grid-cols-1 lg:grid-cols-3 container mx-auto items-start gap-5 justify-between;
+    }
+  }
+  
+  &__header {
+    @apply text-center mb-16;
+
+    &-text {
+      color: #7E3107;
+      font-size: 14px;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  &__title {
+    @apply text-3xl md:text-4xl font-bold text-secondary-dark mb-4;
+  }
+  
+  &__subtitle {
+    @apply text-lg text-gray-600 max-w-3xl mx-auto;
+  }
+  
+  &__grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+  }
+  
+  &__item {
+    @apply flex flex-col h-full;
+  }
+  
+  &__icon {
+    @apply text-primary mb-4 w-12 h-12;
+  }
+  
+  &__name {
+    @apply text-xl font-semibold text-secondary-dark mb-2;
+  }
+  
+  &__description {
+    @apply text-gray-600;
+  }
+  
+  &__showcase {
+    @apply overflow-hidden rounded-[20px];
+    box-shadow: 0px 10.35px 69.01px 0px #5235E81A;
+    flex-direction: column;
+    border: 1.73px solid #EFEDFD;
+
+  }
+  
+  &__showcase-grid {
+    @apply grid grid-cols-1 lg:grid-cols-1 items-center;
+  }
+  
+  &__showcase-image {
+    @apply w-full h-auto;
+  }
+  
+  &__showcase-content {
+    @apply flex flex-col space-y-4 p-8;
+  }
+  
+  &__showcase-title {
+    @apply text-2xl md:text-xl font-bold text-secondary-dark;
+  }
+  
+  &__showcase-description {
+    @apply text-gray-600 font-normal text-sm;
+  }
+  
+  &__showcase-features {
+    @apply space-y-4;
+  }
+  
+  &__showcase-feature {
+    @apply flex items-start;
+  }
+  
+  &__showcase-feature-icon {
+    @apply text-primary mr-3 mt-1 flex-shrink-0;
+  }
+  
+  &__showcase-feature-text {
+    @apply text-gray-700;
+  }
+
+  &__stats {
+    @apply flex flex-wrap justify-center gap-40 text-center mb-20;
+  }
+  
+  &__stat {
+    @apply flex flex-col gap-3 items-center;
+    
+    &-value {
+      @apply text-3xl align-middle items-center flex md:text-4xl font-normal text-secondary-dark mb-1;
+
+      &--plus {
+        color: #0E063780;
+      }
+    }
+    
+    &-label {
+      @apply text-sm text-gray-500 font-normal;
+    }
+  }
+  
+  &__badge {
+    @apply ml-2 inline-flex items-center px-3 py-0.5 rounded-full text-xs font-normal bg-[#DAF727] text-[#0E0637];
+  }
+
+  &__last-img {
+  @apply max-h-60 object-contain
+};
+}

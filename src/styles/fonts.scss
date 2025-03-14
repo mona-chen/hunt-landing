@@ -1,0 +1,59 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Define font families */
+@layer base {
+  body {
+    @apply font-secondary font-normal leading-normal;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-primary font-normal uppercase tracking-tight;
+    letter-spacing: -0.03em; /* Adjust letter spacing */
+  }
+
+  h2, h3, h4, h5, h6 {
+    @apply font-secondary font-bold capitalize;
+  }
+
+  p {
+    @apply font-secondary font-normal;
+    line-height: 1.2; /* Adjust line height */
+  }
+}
+
+/* Create utility classes for DM Mono */
+@layer utilities {
+  .font-primary {
+    font-family: "DM Mono", monospace;
+  }
+
+  .font-secondary {
+    font-family: "DM Sans", sans-serif;
+  }
+
+  .dm-mono-light {
+    @apply font-primary font-light not-italic;
+  }
+
+  .dm-mono-regular {
+    @apply font-primary font-normal not-italic;
+  }
+
+  .dm-mono-medium {
+    @apply font-primary font-medium not-italic;
+  }
+
+  .dm-mono-light-italic {
+    @apply font-primary font-light italic;
+  }
+
+  .dm-mono-regular-italic {
+    @apply font-primary font-normal italic;
+  }
+
+  .dm-mono-medium-italic {
+    @apply font-primary font-medium italic;
+  }
+}

@@ -1,0 +1,124 @@
+---
+import NumberFlow from '@number-flow/react'
+import fastImage from "../assets/images/fast-local-transfers.png"
+import paymentLinksImage from "../assets/images/payment-links.png"
+import dedicatedIbanImage from "../assets/images/dedicated-iban.png"
+import securePaymentMethods from "../assets/images/secure-payment-methods.png"
+import virtualCards from "../assets/images/virtual-cards.png"
+import multipleCurrencies from "../assets/images/multi-currencies.png"
+import Image from 'astro/components/Image.astro'
+---
+
+
+<section id="features" class="features">
+      <div class="features__stats animate-on-scroll" data-animation="slide-up">
+      <div class="features__stat">
+        <div class="features__stat-value">1 Million<span class="features__stat-value--plus">+</span></div>
+        <div class="features__stat-label">Transferred</div>
+      </div>
+      
+      <div class="features__stat">
+        <div class="features__stat-value">
+          <NumberFlow value={40 as number} :client:load /><span class="features__stat-value--plus">+</span> 
+          <span class="features__badge">counting...</span>
+        </div>
+        <div class="features__stat-label">Currencies</div>
+      </div>
+      
+      <div class="features__stat">
+        <div class="features__stat-value">1 platform</div>
+        <div class="features__stat-label">For All Your Needs</div>
+      </div>
+    </div>
+
+  <div class="features__container">
+    <div class="features__header animate-on-scroll" data-animation="slide-up">
+      <p class="features__header-text">FEATURES</p>
+      <h2 class="features__title">Faster, Smarter Payments—<br>Built for Global Trade.</h2>
+    </div>
+    
+    <div class="features__container-grid">
+      <div class="features__showcase">
+        <div class="features__showcase-grid">
+          <div class="features__showcase-image animate-on-scroll" data-animation="slide-in">
+            <Image src={fastImage} alt="Fast Local Transfers" />
+          </div>
+          
+          <div class="features__showcase-content animate-on-scroll" data-animation="slide-up">
+            <h3 class="features__showcase-title">Fast Local Transfers</h3>
+            <p class="features__showcase-description">Send money to friends and family locally with instant transfers. No waiting, no hassle.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="features__showcase">
+        <div class="features__showcase-grid">
+          <div class="features__showcase-image animate-on-scroll" data-animation="slide-in">
+            <Image src={paymentLinksImage} alt="Create Payment Links" />
+          </div>
+          <div class="features__showcase-content animate-on-scroll" data-animation="slide-up">
+            <h3 class="features__showcase-title">Create Payment Links</h3>
+            <p class="features__showcase-description">Generate custom payment links to share with customers or friends for easy money collection.</p>
+          </div>
+          
+     
+        </div>
+      </div>
+      
+      <div class="features__showcase">
+        <div class="features__showcase-grid">
+          <div class="features__showcase-image animate-on-scroll" data-animation="slide-in">
+            <Image src={dedicatedIbanImage} alt="Dedicated IBANs for different currencies" />
+          </div>
+          
+          <div class="features__showcase-content animate-on-scroll" data-animation="slide-up">
+            <h3 class="features__showcase-title">Dedicated IBANs for different currencies</h3>
+            <p class="features__showcase-description">Hold and receive payments in multiple currencies with unique IBANs—no hidden fees.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="features__showcase">
+        <div class="features__showcase-grid">
+          <div class="features__showcase-image animate-on-scroll" data-animation="slide-in">
+            <Image src={securePaymentMethods} alt="Global Payments with Virtual Card" />
+          </div>
+
+          <div class="features__showcase-content animate-on-scroll" data-animation="slide-up">
+            <h3 class="features__showcase-title">Secured Payment Methods</h3>
+            <p class="features__showcase-description">Every transaction is protected with top-tier security, ensuring your funds are safe at all times.</p>
+          </div>
+          
+       
+        </div>
+      </div>
+      
+      <div class="features__showcase">
+        <div class="features__showcase-grid">
+          <div class="features__showcase-image animate-on-scroll" data-animation="slide-in">
+            <Image src={virtualCards} alt="Multi-Currency Support" />
+          </div>
+          
+          <div class="features__showcase-content animate-on-scroll" data-animation="slide-up">
+            <h3 class="features__showcase-title">Global Payment with Virtual Card</h3>
+            <p class="features__showcase-description">Shop and pay anywhere in the world with a secure virtual card—no physical card needed.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="features__showcase">
+        <div class="features__showcase-grid">
+          <div class="features__showcase-image animate-on-scroll" data-animation="slide-in">
+            <Image class="features__last-img" src={multipleCurrencies} alt="Multi-Currency Support" />
+          </div>
+          
+          <div class="features__showcase-content animate-on-scroll" data-animation="slide-up">
+            <h3 class="features__showcase-title">Request Payment in multiple currencies</h3>
+            <p class="features__showcase-description">Receive payments in any currency, from anywhere—no conversion headaches, no extra fees.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

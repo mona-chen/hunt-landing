@@ -1,0 +1,47 @@
+/* Hero section styles */
+.hero {
+  @apply pt-24 pb-16 md:pt-32 md:pb-24;
+  background-image: url('images/hero_bg.svg');
+  background-color: #FEEFE6;
+  // background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 49rem;
+  overflow: hidden;
+  &__container {
+    @apply container mx-auto px-4;
+  }
+  
+  &__content {
+    @apply flex flex-col w-full items-center;
+  }
+  
+  &__text {
+    @apply md:w-[53rem] mb-8 md:mb-0 md:pr-8 items-center justify-center text-center;
+  }
+  
+  &__title {
+    @apply text-4xl md:text-5xl font-bold text-secondary-dark mb-4 leading-tight;
+    color: #7E3107;
+  }
+  
+  &__subtitle {
+    @apply text-lg text-gray-600 mb-8;
+  }
+  
+  &__actions {
+    @apply flex flex-wrap gap-4;
+  }
+  
+  &__image {
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+}

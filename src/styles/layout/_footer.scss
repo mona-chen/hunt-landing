@@ -1,0 +1,80 @@
+/* Footer styles */
+.footer {
+  @apply py-12 md:py-16 bg-white;
+  
+  &__container {
+    @apply container mx-auto px-4;
+  }
+  
+  &__grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12;
+  }
+  
+  &__column {
+    @apply flex flex-col;
+  }
+  
+  &__logo {
+    @apply w-28 mb-6;
+    
+    img {
+      @apply w-full;
+    }
+  }
+  
+  &__description {
+    @apply text-gray-600 mb-6;
+  }
+  
+  &__social {
+    @apply flex space-x-4;
+  }
+  
+  &__social-link {
+    @apply text-gray-500 hover:text-primary transition-colors duration-300 ease-in-out;
+  }
+  
+  &__title {
+    @apply text-lg font-semibold text-secondary-dark mb-4;
+  }
+  
+  &__links {
+    @apply space-y-3;
+  }
+  
+  &__link {
+    @apply text-gray-600 hover:text-primary transition-colors duration-300 ease-in-out;
+  }
+  
+  &__newsletter {
+    @apply mt-8 md:mt-0;
+  }
+  
+  &__form {
+    @apply flex;
+  }
+  
+  &__input {
+    @apply flex-grow px-4 py-2 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+  
+  &__submit {
+    @apply px-4 py-2 bg-primary text-white rounded-r-lg hover:bg-primary-dark transition-colors duration-300 ease-in-out;
+  }
+  
+  &__bottom {
+    @apply pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center;
+  }
+  
+  &__copyright {
+    @apply text-gray-600 mb-4 md:mb-0;
+  }
+  
+  &__legal {
+    @apply flex flex-wrap gap-x-6 gap-y-2;
+  }
+  
+  &__legal-link {
+    @apply text-gray-600 hover:text-primary transition-colors duration-300 ease-in-out;
+  }
+}

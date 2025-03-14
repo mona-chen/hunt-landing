@@ -1,0 +1,28 @@
+/* Card styles */
+.card {
+  @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 ease-in-out;
+  
+  &:hover {
+    @apply shadow-lg transform translate-y-[-5px];
+  }
+  
+  &__header {
+    @apply p-6 border-b border-gray-100;
+  }
+  
+  &__body {
+    @apply p-6;
+  }
+  
+  &__footer {
+    @apply p-6 border-t border-gray-100;
+  }
+  
+  &--feature {
+    @apply flex flex-col h-full;
+  }
+  
+  &--testimonial {
+    @apply text-center p-8;
+  }
+}
