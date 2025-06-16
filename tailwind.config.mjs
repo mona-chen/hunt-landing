@@ -5,28 +5,43 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#7E3107',
+          DEFAULT: '#CC5500',
           light: '#FF7A33',
-          dark: '#E65300'
+          dark: '#B8470A'
         },
         secondary: {
-          DEFAULT: '#1A1A2E',
-          light: '#2A2A3E',
-          dark: '#0A0A1E'
+          DEFAULT: '#7E3107',
+          light: '#A64A1A',
+          dark: '#5A2205'
         },
         accent: {
-          DEFAULT: '#FFD700',
-          light: '#FFDF33',
-          dark: '#E6C200'
+          DEFAULT: '#FF8C42',
+          light: '#FFA366',
+          dark: '#E6732A'
         },
         background: {
-          DEFAULT: '#FFF8F3',
-          gradient: 'linear-gradient(135deg, #FFF8F3 0%, #FFE0CC 100%)'
+          DEFAULT: '#FEEFE6',
+          light: '#FFF8F3',
+          dark: '#F5E0D3'
+        },
+        burnt: {
+          50: '#FFF8F3',
+          100: '#FEEFE6',
+          200: '#FDD5C4',
+          300: '#FCBBA2',
+          400: '#FA875E',
+          500: '#CC5500',
+          600: '#B8470A',
+          700: '#A63D0F',
+          800: '#7E3107',
+          900: '#5A2205'
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Montserrat', 'system-ui', 'sans-serif']
+        primary: ['DM Mono', 'monospace'],
+        secondary: ['DM Sans', 'sans-serif'],
+        sans: ['DM Sans', 'system-ui', 'sans-serif'],
+        display: ['DM Sans', 'system-ui', 'sans-serif']
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

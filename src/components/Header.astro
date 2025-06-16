@@ -7,18 +7,19 @@ import logofull from '../assets/images/full-logo.svg'
 <header class="header">
   <div class="header__container">
     <a href="/" class="header__logo">
-      <Image src={logo} alt="Money Transfer Logo" />
+      <Image src={logo} alt="Hunt Finance Logo" />
     </a>
     
     <nav class="header__nav">
       <a href="#features" class="header__link">Features</a>
-      <a href="#pricing" class="header__link">Pricing</a>
-      <a href="#business" class="header__link">Business</a>
+      <a href="/pricing" class="header__link">Pricing</a>
+      <a href="/business" class="header__link">Business</a>
+      <a href="/about" class="header__link">About</a>
     </nav>
     
     <div class="header__actions !hidden md:!flex">
-      <a href="#login" class="header__link outline px-6 py-1 outline-[#D6D1FA] hover:outline-primary rounded-md">Sign In</a>
-      <a href="#signup" class="btn btn--primary btn--sm">Get Started Now</a>
+      <a href="/login" class="header__link outline px-6 py-1 outline-burnt-300 hover:outline-primary rounded-md">Sign In</a>
+      <a href="/signup" class="btn btn--primary btn--sm">Get Started Now</a>
     </div>
     
     <button class="header__mobile-toggle" aria-label="Toggle mobile menu">
@@ -29,7 +30,7 @@ import logofull from '../assets/images/full-logo.svg'
   <div class="header__mobile-menu header__mobile-menu--closed">
     <div class="header__mobile-menu-header">
       <a href="/" class="header__logo logo-full ">
-        <Image src={logofull} alt="Money Transfer Logo" />
+        <Image src={logofull} alt="Hunt Finance Logo" />
       </a>
       
       <button class="header__mobile-menu-close" aria-label="Close mobile menu">
@@ -39,13 +40,16 @@ import logofull from '../assets/images/full-logo.svg'
     
     <nav class="header__mobile-menu-nav">
       <a href="#features" class="header__mobile-menu-link">Features</a>
-      <a href="#faq" class="header__mobile-menu-link">FAQ</a>
-      <a href="#business" class="header__mobile-menu-link">Business</a>
+      <a href="/pricing" class="header__mobile-menu-link">Pricing</a>
+      <a href="/business" class="header__mobile-menu-link">Business</a>
+      <a href="/about" class="header__mobile-menu-link">About</a>
+      <a href="/careers" class="header__mobile-menu-link">Careers</a>
+      <a href="/blog" class="header__mobile-menu-link">Blog</a>
     </nav>
     
     <div class="header__mobile-menu-actions">
-      <a href="#login" class="btn btn--outline w-full mb-4">Sign In</a>
-      <a href="#signup" class="btn btn--primary w-full">Get Started Now</a>
+      <a href="/login" class="btn btn--outline w-full mb-4">Sign In</a>
+      <a href="/signup" class="btn btn--primary w-full">Get Started Now</a>
     </div>
   </div>
 </header>

@@ -1,0 +1,133 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="About Us - Hunt Finance" description="Learn about Hunt Finance's mission to make global money transfers fast, secure, and affordable for everyone.">
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="section bg-background pt-32">
+      <div class="container">
+        <div class="text-center mb-16 animate-on-scroll" data-animation="slide-up">
+          <h1 class="heading--xl mb-6 text-secondary">About Hunt Finance</h1>
+          <p class="text--lg text-gray-600 max-w-3xl mx-auto">We're on a mission to make global money transfers accessible, affordable, and instant for everyone, everywhere.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="animate-on-scroll" data-animation="slide-up">
+            <h2 class="heading--lg mb-6 text-secondary">Our Mission</h2>
+            <p class="text--md text-gray-600 mb-6">At Hunt Finance, we believe that sending money across borders should be as simple as sending a text message. Founded in 2020, we've been working tirelessly to break down the barriers that make international money transfers expensive, slow, and complicated.</p>
+            <p class="text--md text-gray-600">Our platform combines cutting-edge technology with regulatory compliance to offer you the fastest, most secure, and most affordable way to send money globally.</p>
+          </div>
+          <div class="animate-on-scroll" data-animation="fade-in">
+            <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Team collaboration" class="rounded-lg shadow-lg w-full" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="section bg-background">
+      <div class="container">
+        <div class="text-center mb-16 animate-on-scroll" data-animation="slide-up">
+          <h2 class="heading--lg mb-4 text-secondary">Our Values</h2>
+          <p class="text--md text-gray-600 max-w-3xl mx-auto">These core values guide everything we do at Hunt Finance.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center animate-on-scroll" data-animation="slide-up">
+            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-shield-alt text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-secondary">Security First</h3>
+            <p class="text-gray-600">Your money and data are protected with bank-level security and encryption.</p>
+          </div>
+          
+          <div class="text-center animate-on-scroll" data-animation="slide-up">
+            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-bolt text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-secondary">Speed & Efficiency</h3>
+            <p class="text-gray-600">We leverage technology to make transfers faster than traditional methods.</p>
+          </div>
+          
+          <div class="text-center animate-on-scroll" data-animation="slide-up">
+            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-heart text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-secondary">Customer-Centric</h3>
+            <p class="text-gray-600">Every decision we make is focused on improving your experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-16 animate-on-scroll" data-animation="slide-up">
+          <h2 class="heading--lg mb-4 text-secondary">Meet Our Leadership</h2>
+          <p class="text--md text-gray-600 max-w-3xl mx-auto">Our experienced team brings together expertise from fintech, banking, and technology.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center animate-on-scroll" data-animation="fade-in">
+            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400" alt="CEO" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover" />
+            <h3 class="text-xl font-semibold mb-2 text-secondary">Sarah Chen</h3>
+            <p class="text-primary mb-2">CEO & Co-Founder</p>
+            <p class="text-gray-600 text-sm">Former VP at Goldman Sachs with 15+ years in financial services.</p>
+          </div>
+          
+          <div class="text-center animate-on-scroll" data-animation="fade-in">
+            <img src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400" alt="CTO" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover" />
+            <h3 class="text-xl font-semibold mb-2 text-secondary">Michael Rodriguez</h3>
+            <p class="text-primary mb-2">CTO & Co-Founder</p>
+            <p class="text-gray-600 text-sm">Former Lead Engineer at Stripe, expert in payment infrastructure.</p>
+          </div>
+          
+          <div class="text-center animate-on-scroll" data-animation="fade-in">
+            <img src="https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=400" alt="CPO" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover" />
+            <h3 class="text-xl font-semibold mb-2 text-secondary">Emily Johnson</h3>
+            <p class="text-primary mb-2">Chief Product Officer</p>
+            <p class="text-gray-600 text-sm">Product leader with experience at PayPal and Square.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section bg-background">
+      <div class="container">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div class="animate-on-scroll" data-animation="slide-up">
+            <div class="text-3xl md:text-4xl font-bold text-primary mb-2">$1B+</div>
+            <div class="text-gray-600">Transferred</div>
+          </div>
+          
+          <div class="animate-on-scroll" data-animation="slide-up">
+            <div class="text-3xl md:text-4xl font-bold text-primary mb-2">100K+</div>
+            <div class="text-gray-600">Happy Customers</div>
+          </div>
+          
+          <div class="animate-on-scroll" data-animation="slide-up">
+            <div class="text-3xl md:text-4xl font-bold text-primary mb-2">50+</div>
+            <div class="text-gray-600">Countries</div>
+          </div>
+          
+          <div class="animate-on-scroll" data-animation="slide-up">
+            <div class="text-3xl md:text-4xl font-bold text-primary mb-2">24/7</div>
+            <div class="text-gray-600">Support</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

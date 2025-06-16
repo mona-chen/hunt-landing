@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const personalPlans = [
+  {
+    name: "Basic",
+    price: "Free",
+    description: "Perfect for occasional transfers",
+    features: [
+      "Up to $1,000/month",
+      "Standard exchange rates",
+      "Email support",
+      "Mobile app access",
+      "Basic transaction history"
+    ]
+  },
+  {
+    name: "Premium",
+    price: "$9.99/month",
+    description: "For regular international transfers",
+    features: [
+      "Up to $10,000/month",
+      "Better exchange rates",
+      "Priority support",
+      "Advanced mobile features",
+      "Detailed analytics",
+      "Multi-currency wallet"
+    ],
+    popular: true
+  },
+  {
+    name: "VIP",
+    price: "$29.99/month",
+    description: "For high-volume personal transfers",
+    features: [
+      "Unlimited transfers",
+      "Best exchange rates",
+      "24/7 phone support",
+      "Dedicated account manager",
+      "Premium features",
+      "Investment options"
+    ]
+  }
+];
+
+const businessPlans = [
+  {
+    name: "Starter",
+    price: "Free",
+    description: "For small businesses getting started",
+    features: [
+      "Up to $10,000/month",
+      "Standard rates",
+      "Email support",
+      "5 team members",
+      "Basic reporting"
+    ]
+  },
+  {
+    name: "Professional",
+    price: "$49/month",
+    description: "For growing businesses",
+    features: [
+      "Up to $100,000/month",
+      "Preferred rates",
+      "Priority support",
+      "Unlimited team members",
+      "API access",
+      "Advanced reporting"
+    ],
+    popular: true
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    description: "For large organizations",
+    features: [
+      "Unlimited volume",
+      "Best rates",
+      "Dedicated manager",
+      "Custom solutions",
+      "SLA guarantees",
+      "White-label options"
+    ]
+  }
+];
+---
+
+<Layout title="Pricing - Hunt Finance" description="Choose the perfect plan for your money transfer needs. Transparent pricing with no hidden fees.">
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="section bg-background pt-32">
+      <div class="container">
+        <div class="text-center mb-16 animate-on-scroll" data-animation="slide-up">
+          <h1 class="heading--xl mb-6 text-secondary">Simple, Transparent Pricing</h1>
+          <p class="text--lg text-gray-600 max-w-3xl mx-auto">Choose the plan that fits your needs. No hidden fees, no surprises. Cancel anytime.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personal Plans -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-12 animate-on-scroll" data-animation="slide-up">
+          <h2 class="heading--lg mb-4 text-secondary">Personal Plans</h2>
+          <p class="text--md text-gray-600">Perfect for individuals sending money to family and friends.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {personalPlans.map((plan) => (
+            <div class={`bg-white p-8 rounded-lg shadow-md border-2 animate-on-scroll ${plan.popular ? 'border-primary' : 'border-burnt-200'}`} data-animation="fade-in">
+              {plan.popular && (
+                <div class="bg-primary text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">Most Popular</div>
+              )}
+              <h3 class="text-2xl font-bold mb-2 text-secondary">{plan.name}</h3>
+              <div class="text-3xl font-bold text-primary mb-2">{plan.price}</div>
+              <p class="text-gray-600 mb-6">{plan.description}</p>
+              <ul class="space-y-3 mb-8">
+                {plan.features.map((feature) => (
+                  <li class="flex items-center text-gray-600">
+                    <i class="fas fa-check text-primary mr-3"></i>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <a href="/signup" class={`btn w-full ${plan.popular ? 'btn--primary' : 'btn--outline'}`}>Get Started</a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Business Plans -->
+    <section class="section bg-background">
+      <div class="container">
+        <div class="text-center mb-12 animate-on-scroll" data-animation="slide-up">
+          <h2 class="heading--lg mb-4 text-secondary">Business Plans</h2>
+          <p class="text--md text-gray-600">Designed for businesses of all sizes with advanced features and support.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {businessPlans.map((plan) => (
+            <div class={`bg-white p-8 rounded-lg shadow-md border-2 animate-on-scroll ${plan.popular ? 'border-primary' : 'border-burnt-200'}`} data-animation="fade-in">
+              {plan.popular && (
+                <div class="bg-primary text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">Most Popular</div>
+              )}
+              <h3 class="text-2xl font-bold mb-2 text-secondary">{plan.name}</h3>
+              <div class="text-3xl font-bold text-primary mb-2">{plan.price}</div>
+              <p class="text-gray-600 mb-6">{plan.description}</p>
+              <ul class="space-y-3 mb-8">
+                {plan.features.map((feature) => (
+                  <li class="flex items-center text-gray-600">
+                    <i class="fas fa-check text-primary mr-3"></i>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <a href="/signup" class={`btn w-full ${plan.popular ? 'btn--primary' : 'btn--outline'}`}>
+                {plan.price === 'Custom' ? 'Contact Sales' : 'Get Started'}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-12 animate-on-scroll" data-animation="slide-up">
+          <h2 class="heading--lg mb-4 text-secondary">Pricing FAQ</h2>
+        </div>
+        
+        <div class="max-w-3xl mx-auto space-y-6">
+          <div class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="fade-in">
+            <h3 class="font-semibold mb-2 text-secondary">Are there any hidden fees?</h3>
+            <p class="text-gray-600">No, we believe in transparent pricing. All fees are clearly displayed before you complete any transaction.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="fade-in">
+            <h3 class="font-semibold mb-2 text-secondary">Can I change my plan anytime?</h3>
+            <p class="text-gray-600">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="fade-in">
+            <h3 class="font-semibold mb-2 text-secondary">What payment methods do you accept?</h3>
+            <p class="text-gray-600">We accept all major credit cards, bank transfers, and digital wallets for subscription payments.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="fade-in">
+            <h3 class="font-semibold mb-2 text-secondary">Is there a free trial?</h3>
+            <p class="text-gray-600">Yes, all paid plans come with a 30-day free trial. No credit card required to start.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

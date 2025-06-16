@@ -1,0 +1,173 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const openPositions = [
+  {
+    title: "Senior Frontend Developer",
+    department: "Engineering",
+    location: "Remote / San Francisco",
+    type: "Full-time",
+    description: "Join our engineering team to build the next generation of financial technology products."
+  },
+  {
+    title: "Product Manager",
+    department: "Product",
+    location: "New York / Remote",
+    type: "Full-time",
+    description: "Lead product strategy and development for our core money transfer platform."
+  },
+  {
+    title: "Compliance Officer",
+    department: "Legal & Compliance",
+    location: "London",
+    type: "Full-time",
+    description: "Ensure our operations meet regulatory requirements across global markets."
+  },
+  {
+    title: "Customer Success Manager",
+    department: "Customer Success",
+    location: "Remote",
+    type: "Full-time",
+    description: "Help our customers succeed and grow their businesses using our platform."
+  },
+  {
+    title: "Data Scientist",
+    department: "Data & Analytics",
+    location: "San Francisco",
+    type: "Full-time",
+    description: "Use data to drive insights and improve our fraud detection and risk management."
+  },
+  {
+    title: "Marketing Manager",
+    department: "Marketing",
+    location: "Remote / New York",
+    type: "Full-time",
+    description: "Drive growth through innovative marketing campaigns and partnerships."
+  }
+];
+---
+
+<Layout title="Careers - Hunt Finance" description="Join Hunt Finance and help us revolutionize global money transfers. Explore open positions and grow your career with us.">
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="section bg-background pt-32">
+      <div class="container">
+        <div class="text-center mb-16 animate-on-scroll" data-animation="slide-up">
+          <h1 class="heading--xl mb-6 text-secondary">Join Our Mission</h1>
+          <p class="text--lg text-gray-600 max-w-3xl mx-auto">Help us build the future of global finance. We're looking for passionate individuals who want to make a real impact.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Work With Us -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-16 animate-on-scroll" data-animation="slide-up">
+          <h2 class="heading--lg mb-4 text-secondary">Why Work With Us?</h2>
+          <p class="text--md text-gray-600 max-w-3xl mx-auto">We offer more than just a job - we offer the opportunity to shape the future of financial services.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center animate-on-scroll" data-animation="slide-up">
+            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-rocket text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-secondary">Innovation First</h3>
+            <p class="text-gray-600">Work with cutting-edge technology and solve complex problems that impact millions of users worldwide.</p>
+          </div>
+          
+          <div class="text-center animate-on-scroll" data-animation="slide-up">
+            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-users text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-secondary">Great Team</h3>
+            <p class="text-gray-600">Join a diverse, talented team of professionals who are passionate about making a difference.</p>
+          </div>
+          
+          <div class="text-center animate-on-scroll" data-animation="slide-up">
+            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-chart-line text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-secondary">Growth Opportunities</h3>
+            <p class="text-gray-600">Advance your career with mentorship, training, and opportunities to take on new challenges.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section bg-background">
+      <div class="container">
+        <div class="text-center mb-16 animate-on-scroll" data-animation="slide-up">
+          <h2 class="heading--lg mb-4 text-secondary">Benefits & Perks</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="fade-in">
+            <i class="fas fa-heart text-primary text-2xl mb-4"></i>
+            <h4 class="font-semibold mb-2 text-secondary">Health & Wellness</h4>
+            <p class="text-gray-600 text-sm">Comprehensive health, dental, and vision insurance</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="fade-in">
+            <i class="fas fa-home text-primary text-2xl mb-4"></i>
+            <h4 class="font-semibold mb-2 text-secondary">Remote Work</h4>
+            <p class="text-gray-600 text-sm">Flexible remote work options and home office stipend</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="fade-in">
+            <i class="fas fa-graduation-cap text-primary text-2xl mb-4"></i>
+            <h4 class="font-semibold mb-2 text-secondary">Learning Budget</h4>
+            <p class="text-gray-600 text-sm">Annual budget for courses, conferences, and books</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-lg shadow-md animate-on-scroll" data-animation="fade-in">
+            <i class="fas fa-plane text-primary text-2xl mb-4"></i>
+            <h4 class="font-semibold mb-2 text-secondary">Time Off</h4>
+            <p class="text-gray-600 text-sm">Unlimited PTO and company-wide mental health days</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open Positions -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center mb-16 animate-on-scroll" data-animation="slide-up">
+          <h2 class="heading--lg mb-4 text-secondary">Open Positions</h2>
+          <p class="text--md text-gray-600 max-w-3xl mx-auto">Find your next opportunity and help us build the future of finance.</p>
+        </div>
+        
+        <div class="space-y-6">
+          {openPositions.map((position) => (
+            <div class="bg-white p-6 rounded-lg shadow-md border border-burnt-200 hover:shadow-lg transition-shadow animate-on-scroll" data-animation="fade-in">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div class="mb-4 md:mb-0">
+                  <h3 class="text-xl font-semibold text-secondary mb-2">{position.title}</h3>
+                  <div class="flex flex-wrap gap-4 text-sm text-gray-600 mb-2">
+                    <span><i class="fas fa-building mr-1"></i>{position.department}</span>
+                    <span><i class="fas fa-map-marker-alt mr-1"></i>{position.location}</span>
+                    <span><i class="fas fa-clock mr-1"></i>{position.type}</span>
+                  </div>
+                  <p class="text-gray-600">{position.description}</p>
+                </div>
+                <div class="flex-shrink-0">
+                  <a href={`/careers/${position.title.toLowerCase().replace(/\s+/g, '-')}`} class="btn btn--primary">Apply Now</a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div class="text-center mt-12 animate-on-scroll" data-animation="slide-up">
+          <p class="text-gray-600 mb-4">Don't see a position that fits? We're always looking for talented people.</p>
+          <a href="/contact" class="btn btn--outline">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
